@@ -20,3 +20,9 @@ Step 2
 Step 3
 
 	Adding Sentiment Analysis to our application
+	
+Step 4 
+
+	Create a new route to experiment with the sentiment module
+	
+	
