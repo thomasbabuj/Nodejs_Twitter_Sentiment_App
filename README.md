@@ -17,4 +17,6 @@ Step 2
 
 	Creating simplest Node.js Express app ( app.js )
 	
-	
+Step 3
+
+	Adding Sentiment Analysis to our application
