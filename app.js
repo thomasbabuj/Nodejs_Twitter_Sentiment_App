@@ -2,8 +2,24 @@
 var port    = (process.env.VCAP_APP_PORT || 3000);
 var express = require("express");
 var sentiment = require("sentiment");
+var twitter = require("ntwitter");
 
 var app = express();
+
+var tweeterapi = new twitter({
+	consumer_key : 'HpKdmzSR1FtlZ1VERltZmQ',
+	consumer_secret: 'vK15m4Fncq73qzkyMdtpYTWMerP5ukmKOHSzvnZuKMI',
+	access_token_key: 'd#C$@Ty^&cp0$',
+	access_token_secret: '&cp@T#C$y^0$d'
+});
+
+
+app.get('/twitterCheck', function(req, res){
+	tweeterapi.verifyCredentials(access_token_key, access_token_secret, function (error, data) {
+		console.log ( "data = " + data);
+        //res.send("Hello, " + data.name + ".  I am in your twitters.");
+    });
+});
 
 
 app.get('/hello', function(req, res){
@@ -13,7 +29,6 @@ app.get('/hello', function(req, res){
 app.get('/thomas', function(req, res){
 	res.send("Hi thomas, How are u?");
 });
-
 
 app.get('/testSentiment',
     function (req, res) {
