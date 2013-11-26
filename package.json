@@ -1,0 +1,10 @@
+
+{
+	"name" : "SmpleSentimentAnalysisApp",
+	"description" : "Simple Sentiment Analysis App",
+	"version" : "0.9.0",
+	"private" : true,
+	"dependencies" : {
+		"express" : "3.x"
+	}
+}
